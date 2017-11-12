@@ -1,0 +1,251 @@
+/*Base stylez*/
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Cairo', sans-serif;
+	margin: 0;
+	background: #f9f9f9;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1, h2, h3 {
+	font-family: 'Anton', sans-serif;
+}
+
+h3 {
+	font-weight: 500;
+}
+
+p {
+	line-height: 1.5;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+a:hover {
+	color: #296a9f;
+}
+
+.container {
+	max-width: 1040px;
+	margin: auto;
+}
+
+.profolio, header, nav ul {
+	padding: 0 2.5%;
+}
+
+.clearfix {
+	clear: both;
+}
+
+.welcome, .copy, .profilio {
+	overflow: hidden;
+}
+
+
+/*header*/
+header {
+	text-align: center;
+	padding: 0 2.5%;
+	padding-bottom: 20px;
+}
+
+	.header-title {
+		font-weight: 900;
+		font-size: 2em;
+	}
+
+	.welcome img {
+		max-width: 80%;
+	}
+
+	nav ul {
+		list-style: none;
+	}
+
+	nav ul li {
+		background: #fff;
+		margin: 10px 0;
+		padding: 10px;
+	}
+
+
+/*Main content*/
+.profolio, .contact {
+	text-align: center;
+}
+
+.profolio {
+	margin-top: 30px;
+	background: #fff;
+	overflow: hidden;
+}
+	.profolio h2 {
+		text-transform: uppercase;
+	}
+
+	.profolio .card {
+		padding-bottom: 20px;
+		max-width: 400px;
+		margin: auto;
+	}
+
+
+/*footer*/
+footer {
+	padding: 2.5%;
+}
+
+	.footer-nav {
+		display: none;
+	}
+
+	.contact {
+	    padding-bottom: 30px;
+	}
+
+		.contact span {
+			font-weight: 600;
+			padding-left: 8px;
+		}
+
+	.copy {
+		border-top: thin #cacaca solid;
+		padding-top: 10px;
+	}
+
+		.top, .author, .footer-nav {
+		    float: left;
+		    width: 50%;
+		    font-weight: 600;
+		}
+
+		.top {
+			text-align: right;
+		}
+
+
+/*media queries*/
+@media (min-width: 768px) {
+
+	/*header*/
+	nav ul li {
+    	background: transparent;
+	    display: inline-block;
+	    margin: 0;
+    	padding: 10px 10px;
+	}
+
+	.welcome {
+		text-align: left;
+	}
+
+		.welcome p {
+			font-size: 1.1em;
+		}
+
+		.welcome img {
+		    width: 250px;
+		    float: right;
+		    margin-left: 20px;
+		}
+
+
+	.profolio .card {
+		float: left;
+		width: 50%;
+		max-width: 100%;
+    	padding: 1%;
+    }
+
+	    .profolio .card img {
+			box-shadow: 0 15px 20px -12px rgba(0,0,0, .8);	
+	    }
+
+	    .profolio .card img:hover {
+			transform: scale(1.05);	
+	    }
+
+    .profolio .card:nth-of-type(2n +1) {
+		clear: both;
+	}
+
+	/*footer*/
+	.top {
+		display: none;
+	}
+
+	nav.footer-nav {
+		display: block;
+		text-align: right;
+	}
+
+		nav.footer-nav ul {
+		    margin: 0;
+		}
+
+		nav.footer-nav ul li {
+		    padding: 0 15px;
+		}
+
+	.contact {
+		max-width: 80%;
+		margin: auto;
+	}
+
+}
+
+
+@media (min-width: 1024px) {
+
+	.profolio, header, nav ul {
+	    padding: 0;
+	}
+
+	.header-title, header nav {
+		float: left;
+		width: 50%;
+	}
+
+		.header-title {
+		    text-align: left;
+		}
+
+		header nav ul, header nav ul li:last-of-type {
+			padding-right: 0;
+			text-align: right;
+		}
+
+		.welcome {
+			clear: both;
+			padding-top: 10px;
+		}
+
+	.profolio .card {
+		width: 33.3%;
+    }
+
+    	.profolio .card img:hover {
+			transform: scale(1.1);	
+	    }
+
+	    .profolio .card:nth-of-type(2n +1) {
+			clear: unset;
+		}
+
+	    .profolio .card:nth-of-type(3n +1) {
+			clear: both;
+		}
+
+} 
