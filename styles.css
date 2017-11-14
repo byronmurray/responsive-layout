@@ -32,8 +32,12 @@ a {
 	font-weight: bold;
 }
 
-a:hover {
-	color: #296a9f;
+/*helper classes*/
+
+.clearfix::after {
+	content: "";
+	display: table;
+	clear: both;
 }
 
 .container {
@@ -41,24 +45,11 @@ a:hover {
 	margin: auto;
 }
 
-.profolio, header, nav ul {
-	padding: 0 2.5%;
-}
-
-.clearfix {
-	clear: both;
-}
-
-.welcome, .copy, .profilio {
-	overflow: hidden;
-}
-
 
 /*header*/
 header {
 	text-align: center;
 	padding: 0 2.5%;
-	padding-bottom: 20px;
 }
 
 	.header-title {
@@ -66,19 +57,30 @@ header {
 		font-size: 2em;
 	}
 
-	.welcome img {
-		max-width: 80%;
+	.welcome {
+		padding: 30px 2.5%;
+		text-align: center;
 	}
 
 	nav ul {
 		list-style: none;
+		padding-left: 0;
 	}
 
-	nav ul li {
-		background: #fff;
-		margin: 10px 0;
-		padding: 10px;
-	}
+		header nav li {
+			background: #fff;
+		}
+
+		header nav a {
+			margin: 10px 0;
+			padding: 10px;
+			display: block;
+		}
+
+		header a:hover {
+			color: #fff;
+			background: black;
+		}
 
 
 /*Main content*/
@@ -87,9 +89,8 @@ header {
 }
 
 .profolio {
-	margin-top: 30px;
 	background: #fff;
-	overflow: hidden;
+	padding: 15px 2.5% 0;
 }
 	.profolio h2 {
 		text-transform: uppercase;
@@ -138,29 +139,50 @@ footer {
 
 /*media queries*/
 @media (min-width: 768px) {
+	body {
+		padding-top: 152px;
+	}
+
+	.container {
+	    padding: 0 15px;
+	}
+
+	.header-title, nav li {
+		display: inline-block;
+	}
 
 	/*header*/
+	header {
+		background: #fff;
+	    box-shadow: 0 10px 13px -12px rgba(0,0,0, .8);
+	    padding-bottom: 0;
+	    position: fixed;
+	    width: 100%;
+	    top: 0;
+	}
+
 	nav ul li {
     	background: transparent;
-	    display: inline-block;
 	    margin: 0;
-    	padding: 10px 10px;
 	}
+
+		header nav a {
+		    margin: 0;
+		    padding: 15px 15px;
+		}
 
 	.welcome {
 		text-align: left;
 	}
-
+	
 		.welcome p {
 			font-size: 1.1em;
 		}
-
+	
 		.welcome img {
-		    width: 250px;
 		    float: right;
 		    margin-left: 20px;
 		}
-
 
 	.profolio .card {
 		float: left;
@@ -168,37 +190,37 @@ footer {
 		max-width: 100%;
     	padding: 1%;
     }
-
+	
 	    .profolio .card img {
 			box-shadow: 0 15px 20px -12px rgba(0,0,0, .8);	
 	    }
-
+	
 	    .profolio .card img:hover {
 			transform: scale(1.05);	
 	    }
-
-    .profolio .card:nth-of-type(2n +1) {
-		clear: both;
-	}
-
+	
+	    .profolio .card:nth-of-type(2n +1) {
+			clear: both;
+		}
+	
 	/*footer*/
 	.top {
 		display: none;
 	}
-
+	
 	nav.footer-nav {
 		display: block;
 		text-align: right;
 	}
-
+	
 		nav.footer-nav ul {
 		    margin: 0;
 		}
-
+	
 		nav.footer-nav ul li {
 		    padding: 0 15px;
 		}
-
+	
 	.contact {
 		max-width: 80%;
 		margin: auto;
@@ -209,43 +231,42 @@ footer {
 
 @media (min-width: 1024px) {
 
-	.profolio, header, nav ul {
-	    padding: 0;
+	body {
+		padding-top: 62px;
 	}
 
-	.header-title, header nav {
-		float: left;
-		width: 50%;
+	header {
+		text-align: left;
 	}
-
-		.header-title {
-		    text-align: left;
+	
+		header nav ul{
+		    display: inline-block;
+		    float: right;
+		    margin: 0;
 		}
 
-		header nav ul, header nav ul li:last-of-type {
-			padding-right: 0;
-			text-align: right;
+		header nav a {
+			display: block;
 		}
-
-		.welcome {
-			clear: both;
-			padding-top: 10px;
-		}
+	
+	.welcome {
+		padding: 30px 0;
+	}
 
 	.profolio .card {
 		width: 33.3%;
     }
-
-    	.profolio .card img:hover {
+	
+	    .profolio .card img:hover {
 			transform: scale(1.1);	
 	    }
-
+	
 	    .profolio .card:nth-of-type(2n +1) {
 			clear: none;
 		}
-
+	
 	    .profolio .card:nth-of-type(3n +1) {
 			clear: both;
 		}
-
-} 
+	
+	} 

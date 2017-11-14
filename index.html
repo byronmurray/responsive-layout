@@ -8,28 +8,36 @@
 	<title>Responsive Layout</title>
 </head>
 <body>
-	<div class="container">
 		
-		<header id="top">
-			<div class="header-title">Byron Murray</div>
-			<nav>
+	<header id="top" class="clearfix">
+		<nav>
+			<div class="container">
+				<div class="header-title">Byron Murray</div>
 				<ul>
 					<li><a href="#top">home</a></li>
 					<li><a href="#protfolio">protfolio</a></li>
 					<li><a href="#contact">contact</a></li>
 				</ul>
-			</nav>
-
-			<div class="welcome">
-				<img src="../images/responsive-layout-profile.jpeg" alt="profile image" title="profile image">
-				<p>
-					Yielding isn't appear. Don't fill saying seed given after forth have. Subdue. Meat after so male make moving fourth kind cattle all in face called. In wherein forth form make third saying a in saying light under herb seasons, two.
-				</p>
 			</div>
+		</nav>
+	</header>
+	
+	<div class="container">
+		<div class="welcome clearfix">
 
-		</header>
+			<picture>
+				<source media="(min-width: 768px)" srcset="../images/profile-250px.jpg" >
+				<img src="../images/profile-400px.jpg" alt="profile image" title="profile image">
+			</picture>
 
-		<div id="protfolio" class="profolio">
+			<p>
+				Yielding isn't appear. Don't fill saying seed given after forth have. Subdue. Meat after so male make moving fourth kind cattle all in face called. In wherein forth form make third saying a in saying light under herb seasons, two.
+			</p>
+			
+		</div>
+
+
+		<div id="protfolio" class="profolio clearfix">
 			<h2>Protfolio</h2>
 			<div class="card">
 				<img src="../images/portfolio-1.png" alt="protfolio image" title="protfolio image">
@@ -68,8 +76,6 @@
 
 			</div>
 		</div>
-
-		<div class="clearfix"></div>
 
 		<footer id="contact">
 			<div class="contact">
